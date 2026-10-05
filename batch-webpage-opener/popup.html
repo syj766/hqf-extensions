@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批量打开网页助手</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <img class="app-logo" src="assets/logo.png" alt="批量打开网页助手">
+        <div class="app-title">
+          <h1>批量打开网页助手</h1>
+          <p>按场景分组，一键打开一组网页</p>
+        </div>
+      </header>
+
+      <nav class="group-bar" id="groupBar" aria-label="分组"></nav>
+
+      <div class="group-title">
+        <span id="groupName" class="group-name">工作</span>
+        <span class="group-actions">
+          <button id="renameGroup" class="link-btn" type="button">重命名</button>
+          <button id="deleteGroup" class="link-btn" type="button">删除分组</button>
+        </span>
+      </div>
+
+      <section class="pane">
+        <ul id="linkList" class="link-list"></ul>
+
+        <p id="emptyHint" class="empty-hint" hidden>
+          这个分组还没有网址。点击「添加网址」，把这一场景要打开的网页存进来，插件会自动记住，下次一键全部打开。
+        </p>
+
+        <button id="addLink" class="ghost-btn" type="button">＋ 添加网址</button>
+
+        <div class="meta-row">
+          <span id="saveState" class="save-state">已自动保存</span>
+          <span id="selCount" class="sel-count">已选 0 / 0 个</span>
+        </div>
+
+        <button id="openGroup" class="primary-btn" type="button" disabled>打开网页</button>
+        <div id="statusArea" class="status" aria-live="polite"></div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

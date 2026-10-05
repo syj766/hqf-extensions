@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "version": "0.5.0",
+  "description": "__MSG_extensionDesc__",
+  "default_locale": "zh_CN",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "favicon"
+  ],
+  "host_permissions": [
+    "https://tracking.zbrowser.cn/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src https://tracking.zbrowser.cn"
+  },
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuO+3klFX21YSw5bNXd3XhYn7Z+1Pe3llR1boC3dM4OIqAsBOv0I3j9gY+LB2c8NjMZbiKx6reyRngdNci+z9spY6IPbIPJnIpWcq/pxNDZltfkkCI5KfadZ6FE82uglay4jxFiJKSgvQYcdW5za02otLcuzKTsCpUZTN49tMgUdvMDgbOZO15k14hc0LxJq1BwzOffdWgs2aCAxwCx63Vn8chKTEs4mh6mq63PUCroT5YBT+xwT5dxmOIQ38d5iIYeCy6UPix3pCxwAxuZh4yfTXPBHnIsoqMOY7P8ZCIeofx1/+1YcmX1DAh+y6OY7BUla6Lp15rEv8H7E9df99xwIDAQAB",
+  "action": {
+    "default_title": "__MSG_extensionName__",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
+  }
+}
